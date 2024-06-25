@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Management</title>
+    <style>
+           body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+form {
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+form input {
+  width: calc(100% - 20px);
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+form #img-edit {
+  max-width: 100%;
+  margin-bottom: 10px;
+}
+
+form #btn-save {
+  text-align: center;
+}
+
+form button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+form button:hover {
+  background-color: #0056b3;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+table th, table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+table th {
+  background-color: #007bff;
+  color: white;
+}
+
+table td img {
+  max-width: 100px;
+  height: auto;
+  display: block;
+}
+
+table button {
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+table button:hover {
+  background-color: #0056b3;
+}
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid rgba(222, 161, 135, 0.662);
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: rgba(0, 0, 255, 0.249);
+        }
+
+        img {
+            max-width: 200px;
+            height: auto;
+            border: 1px solid #000;
+        }
+
+        form#form-book {
+            margin-bottom: 20px;
+        }
+
+        form#form-book label {
+            display: inline-block;
+            width: 100px;
+            margin-bottom: 10px;
+        }
+
+        form#form-book input {
+            width: 200px;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        form#form-book button {
+            padding: 10px 20px ;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        form#form-book button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Book Management</h1>
+    <form id="form-book">
+        <label for="id">ID:</label>
+        <input type="text" id="id"><br>
+        <label for="title">Title:</label>
+        <input type="text" id="title"><br>
+        <label for="author">Author:</label>
+        <input type="text" id="author"><br>
+        <label for="price">Price:</label>
+        <input type="text" id="price"><br>
+        <label for="img">Image URL:</label>
+        <input type="text" id="img"><br>
+        <button type="button" onclick="add()">Add</button>
+    </form>
+    <div id="btn-save"></div>
+    <img id="img-edit" style="display:none;" alt="Book Image">
+    <table id="table-books"></table>
+    <script src="book.js"></script>
+    <script src="store.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
